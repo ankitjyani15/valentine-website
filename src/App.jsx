@@ -307,7 +307,7 @@ function YesPage() {
                 >
                   {!openedMemories[index] ? (
                     <div className="memory-reveal memory-reveal-open">
-                      <div className="memory-visual gift-placeholder">
+                      <div className="memory-visual memory-visual-placeholder gift-placeholder">
                         <FaGift className="gift-icon" aria-hidden="true" />
                         <p className="gift-text">Tap to open gift memory</p>
                       </div>
@@ -317,7 +317,7 @@ function YesPage() {
                     </div>
                   ) : (
                     <div className="memory-reveal memory-reveal-open">
-                      <div className="memory-visual">
+                      <div className="memory-visual memory-visual-open">
                         <img
                           src={memory.image}
                           alt={`Cute memory ${index + 1}`}

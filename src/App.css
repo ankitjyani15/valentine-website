@@ -7,7 +7,7 @@
   display: grid;
   place-items: center;
   padding: 2.2rem;
-  background: radial-gradient(circle at top, #ffd4e8 0%, #ffc1dd 25%, #ffeaf3 70%, #fff5fb 100%);
+  background: radial-gradient(circle at top, #e7a8c8 0%, #d98eb5 24%, #be6f9a 62%, #aa5f89 100%);
   position: relative;
   overflow: hidden;
 }
@@ -566,9 +566,13 @@
 
 .memory-visual {
   width: 100%;
+  background: #fff6fb;
+}
+
+.memory-visual-placeholder,
+.memory-visual-open {
   aspect-ratio: 3 / 4;
   min-height: 360px;
-  background: #fff6fb;
 }
 
 .timeline-section {
@@ -786,12 +790,12 @@
 
 @media (max-width: 768px) {
   .app-shell {
-    padding: 1.2rem;
+    padding: 0.95rem;
   }
 
   .card {
-    width: min(100%, calc(100vw - 2.4rem));
-    padding: 1.7rem 1.1rem;
+    width: min(100%, calc(100vw - 1.3rem));
+    padding: 1.35rem 0.88rem;
   }
 
   .envelope-flap {
@@ -806,18 +810,31 @@
 
   .memory-grid {
     grid-template-columns: 1fr;
-  }
-
-  .memory-image {
-    height: auto;
+    width: 100%;
+    gap: 0.75rem;
   }
 
   .memory-card {
     width: 100%;
   }
 
-  .memory-visual {
+  .memory-visual-open {
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .memory-visual-placeholder {
     min-height: 300px;
+  }
+
+  .memory-image {
+    height: auto;
+    max-height: none;
+  }
+
+  .floating-heart {
+    font-size: 0.92rem;
+    opacity: 0.45;
   }
 
   .timeline-track {
